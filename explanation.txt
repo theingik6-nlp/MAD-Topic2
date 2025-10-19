@@ -1,0 +1,51 @@
+Overview
+                                                                                                                                                                
+  - HTML is the markup skeleton describing page structure and content elements.                                                                                 
+  - CSS styles that structure—layout, colors, typography—without altering the markup itself.                                                                    
+  - JavaScript (JS) adds behavior: logic, interaction, dynamic updates, data handling.                                                                          
+  - XML and JSON are data formats, not presentation layers; they serialize information for storage or transport.                                                
+  - AJAX is a browser technique (built on JS) for exchanging data with the server asynchronously so that HTML/CSS/UI can update live.                           
+                                                                                                                                                                
+  HTML                                                                                                                                                          
+                                                                                                                                                                
+  - Differences: Only language among the list that browsers render by default as a document; defines elements like <h1>, <p>, <table>.                          
+  - Advantages: Universal standard; semantic tags aid accessibility/SEO; tightly integrated with browsers; easy to learn.                                       
+  - Disadvantages: Static by itself; verbose for complex layouts without CSS; mixing presentation inline becomes hard to maintain.                              
+                                                                                                                                                                
+  CSS                                                                                                                                                           
+                                                                                                                                                                
+  - Differences: Declarative style sheet language targeting HTML/XML elements; controls visual presentation via selectors.                                      
+  - Advantages: Separates design from structure; cascading/inheritance simplifies consistent theming; powerful layout tools (Flexbox, Grid).                    
+  - Disadvantages: Cascade specificity can be tricky; browser quirks persist; debugging complex layouts may require tooling.                                    
+                                                                                                                                                                
+  JavaScript                                                                                                                                                    
+                                                                                                                                                                
+  - Differences: Programming language executed in the browser (and elsewhere via Node); manipulates DOM, handles events, runs AJAX.                             
+  - Advantages: First-class citizen in browsers; huge ecosystem; enables rich interactivity and dynamic rendering.                                              
+  - Disadvantages: Can introduce performance or security issues (XSS) if misused; tooling complexity; asynchronous code adds mental overhead.                   
+                                                                                                                                                                
+  XML                                                                                                                                                           
+                                                                                                                                                                
+  - Differences: Extensible markup for structured data; tags must be closed, case-sensitive; optional schemas (XSD/DTD) enforce shape.                          
+  - Advantages: Self-descriptive; supports mixed content, attributes, namespaces; works well with document-centric data and enterprise systems.                 
+  - Disadvantages: Verbose; parsing more heavyweight than JSON; lack of strict typing without schemas; not ideal for simple data payloads on the web.           
+                                                                                                                                                                
+  JSON                                                                                                                                                          
+                                                                                                                                                                
+  - Differences: Lightweight text format derived from JS objects; arrays, objects, strings, numbers, booleans, null—no attributes or mixed content.             
+  - Advantages: Compact, human-readable; maps naturally to JavaScript; ubiquitous in web APIs; fast to parse/serialize.                                         
+  - Disadvantages: Limited data types (no comments, no date literal); poor fit for deeply mixed-content documents; less self-descriptive than XML for complex   
+  schemas.                                                                                                                                                      
+                                                                                                                                                                
+  AJAX                                                                                                                                                          
+
+  - Differences: Not a format/language but a technique using JS (XMLHttpRequest or fetch) to talk to servers asynchronously and update the DOM.
+  - Advantages: Partial page updates improve UX; decouples data requests from navigation; groundwork for single-page apps.
+  - Disadvantages: Adds complexity (callbacks, promises, error handling); can create inconsistencies if history/state not managed; requires server APIs and     
+  CORS considerations.
+
+  How they work together
+
+  - HTML provides semantic structure; CSS styles it; JS animates and reacts.
+  - JS can use AJAX to request data (often JSON, sometimes XML) and inject the result into HTML, with CSS handling presentation.
+    Understanding each tool’s role—and when one format suits a problem better than another—helps you pick the right combination for your web project.

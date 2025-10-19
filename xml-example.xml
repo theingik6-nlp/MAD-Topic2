@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- A few takeaways from the sample:
+
+  - Tags like <title> and <author> label the data; each tag pair forms an element.
+  - Attributes (id, name, year) decorate elements with concise metadata.
+  - Nested elements (<library> → <section> → <book> → <author>) express hierarchy.
+  - The self-closing <published/> element demonstrates shorthand for empty elements.
+  - Comments  are for human readers and ignored by parsers. 
+ Root element representing an entire collection -->
+<library>
+  <!-- Nested element grouping related books -->
+  <section name="Fiction"><!-- Attribute 'name' adds metadata -->
+    <book id="BK001"><!-- 'book' element identified by an attribute -->
+      <title>Invisible Cities</title><!-- Element holds text content -->
+      <author>
+        <first>Italo</first><!-- Tags describe data; nesting builds structure -->
+        <last>Calvino</last>
+      </author>
+      <published year="1972"/><!-- Self-closing element; no text content -->
+    </book>
+    <book id="BK002">
+      <title>The Left Hand of Darkness</title>
+      <author>
+        <first>Ursula</first>
+        <last>K. Le Guin</last>
+      </author>
+      <published year="1969"/>
+    </book>
+  </section>
+  <section name="Nonfiction">
+    <book id="BK101">
+      <title>Guns, Germs, and Steel</title>
+      <author>
+        <first>Jared</first>
+        <last>Diamond</last>
+      </author>
+      <published year="1997"/>
+    </book>
+  </section>
+</library>
