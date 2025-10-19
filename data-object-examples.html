@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example Objects for JSON, XML, and AJAX</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; line-height: 1.6; }
+    h1 { color: #1f2933; }
+    h2 { color: #2563eb; margin-top: 2rem; }
+    pre { background: #f4f4f5; padding: 1rem; border-radius: 6px; overflow-x: auto; }
+    code { color: #0f172a; }
+    ul { padding-left: 1.5rem; }
+  </style>
+</head>
+<body>
+  <h1>Reusable Example Object</h1>
+  <p>Use the sample "Course Enrollment" object below to practise modelling data as JSON, XML, and loading it with AJAX.</p>
+
+  <h2>Object Description</h2>
+  <ul>
+    <li><strong>Course</strong>: id, title, category, startDate</li>
+    <li><strong>Instructor</strong>: firstName, lastName, email</li>
+    <li><strong>Learners</strong>: array/list of learner objects (name, progressPercent, completed)</li>
+    <li><strong>Settings</strong>: notifications (boolean), deliveryModes (array), maxSeats (number)</li>
+  </ul>
+
+  <h2>JSON Representation</h2>
+  <pre><code>{
+  "course": {
+    "id": "WD-101",
+    "title": "Intro to Web Development",
+    "category": "Programming",
+    "startDate": "2024-09-01"
+  },
+  "instructor": {
+    "firstName": "Maya",
+    "lastName": "Lopez",
+    "email": "maya.lopez@example.edu"
+  },
+  "learners": [
+    { "name": "Ali", "progressPercent": 42, "completed": false },
+    { "name": "Jin", "progressPercent": 100, "completed": true }
+  ],
+  "settings": {
+    "notifications": true,
+    "deliveryModes": ["in-person", "online"],
+    "maxSeats": 25
+  }
+}</code></pre>
+
+  <h2>XML Representation</h2>
+  <pre><code>&lt;courseEnrollment&gt;
+  &lt;course id="WD-101" category="Programming" startDate="2024-09-01"&gt;
+    &lt;title&gt;Intro to Web Development&lt;/title&gt;
+  &lt;/course&gt;
+  &lt;instructor email="maya.lopez@example.edu"&gt;
+    &lt;firstName&gt;Maya&lt;/firstName&gt;
+    &lt;lastName&gt;Lopez&lt;/lastName&gt;
+  &lt;/instructor&gt;
+  &lt;learners&gt;
+    &lt;learner completed="false" progressPercent="42"&gt;Ali&lt;/learner&gt;
+    &lt;learner completed="true" progressPercent="100"&gt;Jin&lt;/learner&gt;
+  &lt;/learners&gt;
+  &lt;settings notifications="true" maxSeats="25"&gt;
+    &lt;deliveryModes&gt;
+      &lt;mode&gt;in-person&lt;/mode&gt;
+      &lt;mode&gt;online&lt;/mode&gt;
+    &lt;/deliveryModes&gt;
+  &lt;/settings&gt;
+&lt;/courseEnrollment&gt;</code></pre>
+
+  <h2>AJAX Practice Scenario</h2>
+  <p>Create files:</p>
+  <ul>
+    <li><code>course-enrollment.json</code> containing the JSON above.</li>
+    <li><code>course-enrollment.xml</code> containing the XML above (optional challenge: fetch and parse XML).</li>
+    <li><code>ajax-course.html</code> with a button that uses <code>fetch("course-enrollment.json")</code> to load learner progress and render a Bootstrap card or plain list.</li>
+  </ul>
+  <p>AJAX exercise steps:</p>
+  <ol>
+    <li>Show "Loading..." text when the request starts.</li>
+    <li>Parse the JSON and display the course title, instructor name, and a list of learners with their progress.</li>
+    <li>Handle errors by showing a dismissible alert.</li>
+    <li>Bonus: add a toggle to switch between JSON and XML sources and parse accordingly.</li>
+  </ol>
+</body>
+</html>

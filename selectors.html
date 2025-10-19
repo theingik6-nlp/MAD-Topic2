@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Selector Examples</title>
+  <style>
+    /* Element selector */
+    p { color: navy; }
+
+    /* Class selector */
+    .highlight { background: #fffa8b; }
+
+    /* ID selector */
+    #unique { border: 2px solid teal; }
+
+    /* Descendant selector */
+    article p { font-style: italic; }
+
+    /* Child selector */
+    ul > li { list-style-type: square; }
+
+    /* Attribute selector */
+    a[target="_blank"] { text-decoration: underline; }
+
+    /* Pseudo-class selector */
+    button:hover { background: #f0f0f0; }
+
+    /* Pseudo-element selector */
+    p::first-line { font-weight: bold; }
+
+    /* Grouping selector */
+    h1, h2, h3 { font-family: "Segoe UI", sans-serif; }
+
+    /* Universal selector */
+    * { box-sizing: border-box; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="unique">CSS Selector Demo</h1>
+    <p class="highlight">This paragraph is highlighted and also styled by the element selector.</p>
+  </header>
+
+  <article>
+    <h2>Article Heading</h2>
+    <p>Paragraph inside article shows descendant selector.</p>
+  </article>
+
+  <section>
+    <h3>List Section</h3>
+    <ul>
+      <li>Child selector applies square bullets to list items.</li>
+      <li>Another list item</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Visit the <a href="https://example.com" target="_blank">Example Site</a>.</p>
+    <button type="button">Hover me</button>
+  </footer>
+</body>
+</html>

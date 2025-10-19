@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Display Methods</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; }
+    button { margin: 0.5rem 0; }
+    pre { background: #f5f5f5; padding: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>JavaScript Display Methods</h1>
+  <section>
+    <h2>document.write()</h2>
+    <p>This button writes directly into the document stream. If used after the page loads, it replaces the document.</p>
+    <button type="button" onclick="document.write('<h2>document.write replaced the page!</h2>');">Run document.write()</button>
+  </section>
+
+  <section>
+    <h2>window.alert()</h2>
+    <p>Click to show an alert box.</p>
+    <button type="button" onclick="window.alert('Hello from window.alert!');">Show Alert</button>
+  </section>
+
+  <section>
+    <h2>console.log()</h2>
+    <p>Logs appear in the browser developer console (F12).</p>
+    <button type="button" onclick="console.log('Logged to the console via console.log()');">Log to Console</button>
+    <pre>Open DevTools &gt; Console to see the message.</pre>
+  </section>
+
+  <section>
+    <h2>innerHTML</h2>
+    <p>The paragraph below is updated using <code>innerHTML</code>.</p>
+    <p id="output">Original content.</p>
+    <button type="button" onclick="document.getElementById('output').innerHTML = 'Updated with innerHTML!';">Update Content</button>
+  </section>
+</body>
+</html>

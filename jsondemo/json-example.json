@@ -1,0 +1,29 @@
+{
+  "apiResponse": {
+    "status": "success",
+    "generatedAt": "2024-07-05T10:15:00Z",
+    "data": [
+      { "id": 101, "name": "Alice", "role": "admin" },
+      { "id": 102, "name": "Bob", "role": "editor" }
+    ]
+  },
+  "configuration": {
+    "theme": "dark",
+    "itemsPerPage": 20,
+    "features": {
+      "beta": true,
+      "notifications": ["email", "sms"]
+    }
+  },
+  "clientState": {
+    "authenticated": true,
+    "activeToken": "eyJhbGciOi...",
+    "cart": {
+      "items": [
+        { "sku": "SKU-001", "qty": 2, "price": 19.99 },
+        { "sku": "SKU-204", "qty": 1, "price": 5.5 }
+      ],
+      "subtotal": 45.48
+    }
+  }
+}
