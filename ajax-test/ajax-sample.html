@@ -1,71 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>AJAX Demo</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 2rem; }
-    #controls { display: flex; align-items: center; gap: 0.5rem; }
-    input[type="text"] { padding: 0.4rem; min-width: 16rem; }
-    button { padding: 0.5rem 1rem; }
-    #status { margin-top: 1rem; color: #555; }
-    #result { margin-top: 1rem; padding: 1rem; border: 1px solid #ccc; background: #f9f9f9; }
-    pre { margin: 0; white-space: pre-wrap; }
-  </style>
-</head>
-<body>
-  <h1>AJAX (XMLHttpRequest) Example</h1>
-  <p>This demo loads JSON from the server without refreshing the page.</p>
-  <div id="controls">
-    <label for="fileInput">JSON file:</label>
-    <input id="fileInput" type="text" value="ajax-sample-data.json" />
-    <button type="button" id="loadBtn">Load Data</button>
-  </div>
-  <div id="status">Idle</div>
-  <div id="result"><pre>Click the button to fetch data...</pre></div>
-
-  <script>
-    const button = document.getElementById('loadBtn');
-    const status = document.getElementById('status');
-    const result = document.getElementById('result').firstElementChild;
-    const fileInput = document.getElementById('fileInput');
-
-    button.addEventListener('click', () => {
-      const url = fileInput.value.trim();
-      if (!url) {
-        status.textContent = 'Please enter a file name.';
-        return;
+  <head>
+    <meta charset="UTF-8" />
+    <title>AJAX Demo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 2rem;
       }
+      #controls {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      input[type="text"] {
+        padding: 0.4rem;
+        min-width: 16rem;
+      }
+      button {
+        padding: 0.5rem 1rem;
+      }
+      #status {
+        margin-top: 1rem;
+        color: #555;
+      }
+      #result {
+        margin-top: 1rem;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        background: #f9f9f9;
+      }
+      pre {
+        margin: 0;
+        white-space: pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>AJAX (XMLHttpRequest) Example</h1>
+    <p>This demo loads JSON from the server without refreshing the page.</p>
+    <div id="controls">
+      <label for="fileInput">JSON file:</label>
+      <input id="fileInput" type="text" value="ajax-sample-data2.json" />
+      <button type="button" id="loadBtn">Load Data</button>
+    </div>
+    <div id="status">Idle</div>
+    <div id="result"><pre>Click the button to fetch data...</pre></div>
 
-      status.textContent = `Requesting data from ${url}...`;
-      const xhr = new XMLHttpRequest();
+    <script>
+      const button = document.getElementById("loadBtn");
+      const status = document.getElementById("status");
+      const result = document.getElementById("result").firstElementChild;
+      const fileInput = document.getElementById("fileInput");
 
-      // Watch for state changes on the request
-      xhr.onreadystatechange = () => {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-          if (xhr.status === 200) {
-            status.textContent = 'Success';
-            try {
-              const data = JSON.parse(xhr.responseText);
-              result.textContent = JSON.stringify(data, null, 2);
-            } catch (error) {
-              status.textContent = 'Loaded, but failed to parse JSON';
-              result.textContent = xhr.responseText;
-            }
-          } else {
-            status.textContent = `Error: ${xhr.status}`;
-            result.textContent = xhr.statusText || 'Request failed';
-          }
+      button.addEventListener("click", () => {
+        const url = fileInput.value.trim();
+        if (!url) {
+          status.textContent = "Please enter a file name.";
+          return;
         }
-      };
 
-      xhr.onerror = () => {
-        status.textContent = 'Network error while fetching file';
-      };
+        status.textContent = `Requesting data from ${url}...`;
+        const xhr = new XMLHttpRequest();
 
-      xhr.open('GET', url, true); // async request
-      xhr.send();
-    });
-  </script>
-</body>
+        // Watch for state changes on the request
+        xhr.onreadystatechange = () => {
+          if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+              status.textContent = "Success";
+              try {
+                const data = JSON.parse(xhr.responseText);
+                result.textContent = JSON.stringify(data, null, 2);
+              } catch (error) {
+                status.textContent = "Loaded, but failed to parse JSON";
+                result.textContent = xhr.responseText;
+              }
+            } else {
+              status.textContent = `Error: ${xhr.status}`;
+              result.textContent = xhr.statusText || "Request failed";
+            }
+          }
+        };
+
+        xhr.onerror = () => {
+          status.textContent = "Network error while fetching file";
+        };
+
+        xhr.open("GET", url, true); // async request
+        xhr.send();
+      });
+    </script>
+  </body>
 </html>
