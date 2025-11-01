@@ -3,7 +3,7 @@
     "status": "success",
     "generatedAt": "2024-07-05T10:15:00Z",
     "data": [
-      { "id": 101, "name": "Alice", "role": "admin" },
+      { "id": 101, "name": "Alice Smith", "role": "admin" },
       { "id": 102, "name": "Bob", "role": "editor" }
     ]
   },
