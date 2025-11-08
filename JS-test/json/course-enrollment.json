@@ -1,0 +1,100 @@
+{
+    "courseEnrollment": [
+        {
+            "course": {
+                "id": "WD-101",
+                "category": "Programming",
+                "startDate": "2024-09-01",
+                "title": "Intro to Web Development"
+            },
+            "instructor": {
+                "email": "yya.lopez@example.edu",
+                "firstName": "Maya",
+                "lastName": "Lopex"
+            },
+            "Learners": [
+                {
+                    "completed": "false",
+                    "progressPercent": "42",
+                    "name": "Ali"
+                },
+                {
+                    "completed": "true",
+                    "progressPercent": "100",
+                    "name": "Sofia"
+                }
+            ],
+            "setting": {
+                "notifications": "true",
+                "maxSeats": "25",
+                "deliveryModes": [
+                    "in-person",
+                    "online"
+                ]
+            }
+        },
+        {
+            "course": {
+                "id": "DS-205",
+                "category": "Data Science",
+                "startDate": "2024-10-01",
+                "title": "Intro to  Data Science"
+            },
+            "instructor": {
+                "email": "ha.lopez@example.edu",
+                "firstName": "Ha",
+                "lastName": "Lopex"
+            },
+            "Learners": [
+                {
+                    "completed": "false",
+                    "progressPercent": "57",
+                    "name": "Kyaw"
+                },
+                {
+                    "completed": "true",
+                    "progressPercent": "100",
+                    "name": "Gyi"
+                }
+            ],
+            "setting": {
+                "notifications": "true",
+                "maxSeats": "25",
+                "deliveryModes": "online"
+            }
+        },
+        {
+            "course": {
+                "id": "N-171",
+                "category": "Networking",
+                "startDate": "2024-10-01",
+                "title": "Intro to  Networking"
+            },
+            "instructor": {
+                "email": "yya.lopez@example.edu",
+                "firstName": "Maya",
+                "lastName": "Lopex"
+            },
+            "Learners": [
+                {
+                    "completed": "false",
+                    "progressPercent": "47",
+                    "name": "Ali"
+                },
+                {
+                    "completed": "true",
+                    "progressPercent": "100",
+                    "name": "Gyi"
+                }
+            ],
+            "setting": {
+                "notifications": "true",
+                "maxSeats": "25",
+                "deliveryModes": [
+                    "in-person",
+                    "hybrid"
+                ]
+            }
+        }
+    ]
+}

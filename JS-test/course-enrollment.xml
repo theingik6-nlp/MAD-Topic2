@@ -1,0 +1,72 @@
+<courseEnrollments>
+
+
+
+    <courseEnrollment>
+        <course id="WD-101" category="Programming" startDate="2024-09-01">
+            <title>Intro to Web Development </title>
+
+        </course>
+        <instructor email="yya.lopez@example.edu">
+         <firstName>Maya</firstName> 
+         <lastName>Lopez</lastName> 
+        </instructor>
+         <learners>
+            <learner completed="false" progressPercent="42">Ali</learner> 
+            <learner completed="true" progressPercent="100">Sofia</learner>  
+        </learners>       
+         <settings notifications="true" maxSeats="25">
+         <deliveryModes>
+                <mode> in-person</mode>
+                <mode> online</mode>
+         </deliveryModes> 
+        </settings>
+    </courseEnrollment>
+
+
+
+    <courseEnrollment>
+            <course id="DS-205" category="Data Science" startDate="2024-10-01">
+                <title>Intro to Data Science</title>
+            </course>
+            <instructor email="ha.lopez@example.edu">
+            <firstName>Ha</firstName> 
+            <lastName>Lopez</lastName> 
+            </instructor>
+            <learners>
+                <learner completed="false" progressPercent="57">Kyaw</learner> 
+                <learner completed="true" progressPercent="100">Gyi</learner>  
+            </learners>       
+            <settings notifications="true" maxSeats="25">
+            <deliveryModes>
+                    <mode> online</mode>
+            </deliveryModes> 
+            </settings>
+        </courseEnrollment>
+
+
+
+    <courseEnrollment>
+            <course id="N-171" category="Networking" startDate="2024-09-01">
+                <title>Intro to Networking</title>
+
+            </course>
+            <instructor email="yya.lopez@example.edu">
+            <firstName>Maya</firstName> 
+            <lastName>Lopez</lastName> 
+            </instructor>
+            <learners>
+                <learner completed="false" progressPercent="47">Ali</learner> 
+                <learner completed="true" progressPercent="100">Gyi</learner>  
+            </learners>       
+            <settings notifications="true" maxSeats="25">
+            <deliveryModes>
+                    <mode> in-person</mode>
+                    <mode> hybrid</mode>
+            </deliveryModes> 
+            </settings>
+        </courseEnrollment>
+
+
+
+</courseEnrollments>

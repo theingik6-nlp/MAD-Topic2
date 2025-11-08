@@ -1,0 +1,84 @@
+{
+  "hotpotShop": {
+    "shopId": "SP-001",
+    "name": "Golden Bowl Hotpot",
+    "address": "No. 25, Insein Road, Yangon",
+    "contact": {
+      "phone": "09876543210",
+      "email": "contact@goldenbowl.mm"
+    },
+    "menu": [
+      {
+        "itemId": "M-101",
+        "name": "Spicy Sichuan Hotpot",
+        "category": "Broth",
+        "price": 12000,
+        "ingredients": [
+          "Chili oil",
+          "Sichuan peppercorns",
+          "Garlic",
+          "Beef bone broth"
+        ],
+        "isAvailable": true
+      },
+      {
+        "itemId": "M-202",
+        "name": "Seafood Combo",
+        "category": "Set Meal",
+        "price": 18000,
+        "ingredients": [
+          "Prawns",
+          "Squid",
+          "Fish balls",
+          "Crab sticks"
+        ],
+        "isAvailable": true
+      }
+    ],
+    "staff": [
+      {
+        "staffId": "ST-001",
+        "name": "Nyein Chan",
+        "role": "Chef",
+        "shift": "Morning"
+      },
+      {
+        "staffId": "ST-002",
+        "name": "Su Su Hlaing",
+        "role": "Waitress",
+        "shift": "Evening"
+      }
+    ],
+    "orders": [
+      {
+        "orderId": "O-5001",
+        "customer": {
+          "customerId": "C-101",
+          "name": "Hnin Ei Mon",
+          "contact": "+95-9-333444555"
+        },
+        "itemsOrdered": [
+          { "itemId": "M-101", "quantity": 1 },
+          { "itemId": "M-202", "quantity": 1 }
+        ],
+        "orderDate": "2025-11-08",
+        "totalAmount": 30000,
+        "status": "Completed"
+      },
+      {
+        "orderId": "O-5002",
+        "customer": {
+          "customerId": "C-102",
+          "name": "Aung Min Khant",
+          "contact": "+95-9-888999000"
+        },
+        "itemsOrdered": [
+          { "itemId": "M-202", "quantity": 2 }
+        ],
+        "orderDate": "2025-11-08",
+        "totalAmount": 36000,
+        "status": "In Progress"
+      }
+    ]
+  }
+}

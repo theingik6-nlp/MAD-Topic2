@@ -1,0 +1,59 @@
+{
+  "library": {
+    "libraryId": "LIB-001",
+    "name": "Central City Library",
+    "address": "45 Green Street, Yangon",
+    "contact": {
+      "phone": "09345028192",
+      "email": "info@centrallibrary.mm"
+    },
+    "books": [
+      {
+        "bookId": "BK-101",
+        "title": "Learning Python",
+        "genre": "Programming",
+        "publicationYear": 2022,
+        "author": {
+          "authorId": "AU-301",
+          "name": "Mark Lutz",
+          "nationality": "American"
+        },
+        "availability": true,
+        "borrowHistory": [
+          {
+            "borrowerId": "BR-001",
+            "borrowerName": "Aye Aye Mon",
+            "borrowDate": "2025-10-15",
+            "returnDate": "2025-10-30"
+          },
+          {
+            "borrowerId": "BR-002",
+            "borrowerName": "Ko Min Htet",
+            "borrowDate": "2025-09-05",
+            "returnDate": "2025-09-20"
+          }
+        ]
+      },
+      {
+        "bookId": "BK-102",
+        "title": "Web Development with HTML & CSS",
+        "genre": "Technology",
+        "publicationYear": 2023,
+        "author": {
+          "authorId": "AU-302",
+          "name": "Jon Duckett",
+          "nationality": "British"
+        },
+        "availability": false,
+        "borrowHistory": [
+          {
+            "borrowerId": "BR-003",
+            "borrowerName": "Nandar Moe",
+            "borrowDate": "2025-11-01",
+            "returnDate": null
+          }
+        ]
+      }
+    ]
+  }
+}
